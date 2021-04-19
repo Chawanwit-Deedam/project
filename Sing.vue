@@ -1,13 +1,15 @@
 <template>
 <div id="sing">
   <center>
-
+           <div class = "pa">Sign up</div>
+           <br><br>
+    <div class = "corona">
       <div class = "about-text">
-        <center>
-           <p>Sign up</p>
-        </center>
+       
+        
         <br>
         <table align=center width="560" height ="140"  >
+          
           <tr >
             <td align = "center">
               <div class="group">      
@@ -68,14 +70,22 @@
               </div>
             </td>
           </tr>
+          <tr>
+            <td align = "center" >
+              <center>
+        <a align = "center" class="button is-info" @click="addItem" style="background-color:#B8860B;">Submit</a>
+      </center>
+            </td>
+          </tr>
         </table >
+        
       </div>
-
+      
+      
+    </div>
   </center>
   
-<center>
-        <a align = "center" class="button is-info" @click="addItem" >Submit</a>
-   </center>
+
         
 
 
@@ -136,8 +146,6 @@ export default {
       this.Email = "";
              
  this.$router.push({ path : "/Login" }); 
-
-
     },
     async removeItem(item, i) {
       await axios.delete("api/users/" + item._id);
@@ -185,23 +193,31 @@ export default {
 .icon {
   cursor: pointer;
 }
-
-
-
 .about-text{
-    width:550px;
+  width:550px;
 }
-.about-text p:nth-child(1){
+.corona{
+  background-image:url("../shoe-06.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.6) 100%), url("../shoe-06.jpg");
+    background-size: cover;
+  width: 600px;
+  height: 650px;
+  border-radius:20px;
+    box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+
+  
+ 
+}
+.pa{
     color:#707070;
     font-family: sans-serif;
     font-weight:bold;
     font-size:28px;
     line-height:0px;
     letter-spacing:4px;
+    
 }
-
 * { box-sizing:border-box; }
-
 /* basic stylings ------------------------------------------ */
 body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
 .container 		{ 
@@ -223,22 +239,21 @@ h2 small {
 }
 .footer 	{ text-align:center; }
 .footer a  { color:#53B2C8; }
-
 /* form starting stylings ------------------------------- */
 .group 			  { 
   position:relative; 
   margin-bottom:45px; 
 }
-input 				{
+input {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
   width:300px;
   border:none;
   border-bottom:1px solid #757575;
+  background-color: rgba(255, 255, 255, 0);
 }
 input:focus 		{ outline:none; }
-
 /* LABEL ======================================= */
 label 				 {
   color:#999; 
@@ -252,14 +267,12 @@ label 				 {
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
 }
-
 /* BOTTOM BARS ================================= */
 .bar 	{ position:relative; display:block; width:300px; }
 .bar:before, .bar:after 	{
@@ -279,12 +292,10 @@ input:focus ~ label, input:valid ~ label 		{
 .bar:after {
   right:50%; 
 }
-
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
-
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
@@ -295,14 +306,12 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   pointer-events:none;
   opacity:0.5;
 }
-
 /* active state */
 input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
-
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
 	from { background:#5264AE; }
@@ -316,8 +325,4 @@ input:focus ~ .highlight {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
-
 </style>
-
-
-
