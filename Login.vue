@@ -2,6 +2,8 @@
   <div id="app">
     <br><br><br>
     <div class="about-container">
+
+    <img src = "../shoe-06.jpg" style = "width:300px; height: 405px; border-radius:20px; margin:-50px;">
       <div class = "about-text">
         <center>
            <p>Login</p>
@@ -66,7 +68,9 @@
 
       </div>
     </div>
+    
     <br>
+      
     
 
 
@@ -91,7 +95,6 @@ export default {
         
        user:"",
       pass: "",
-
     i : 5,
       Price:"",
       Names:"",
@@ -131,8 +134,6 @@ async select(item) {
    async Check(Sta){
      this.Sta =("username or password wrong")
       return (Sta)
-
-
   },
    async I() {
        
@@ -226,9 +227,6 @@ this.Sta='1'
 .icon {
   cursor: pointer;
 }
-
-
-
 .about-container{
     width:80%;
     height:330px;
@@ -242,6 +240,7 @@ this.Sta='1'
     align-items:center;
 }
 
+
 .about-text{
     width:550px;
 }
@@ -253,9 +252,7 @@ this.Sta='1'
     line-height:0px;
     letter-spacing:4px;
 }
-
 * { box-sizing:border-box; }
-
 /* basic stylings ------------------------------------------ */
 body 				 { background:url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); }
 .container 		{ 
@@ -277,7 +274,6 @@ h2 small {
 }
 .footer 	{ text-align:center; }
 .footer a  { color:#53B2C8; }
-
 /* form starting stylings ------------------------------- */
 .group 			  { 
   position:relative; 
@@ -292,7 +288,6 @@ input 				{
   border-bottom:1px solid #757575;
 }
 input:focus 		{ outline:none; }
-
 /* LABEL ======================================= */
 label 				 {
   color:#999; 
@@ -306,14 +301,12 @@ label 				 {
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-
 /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
 }
-
 /* BOTTOM BARS ================================= */
 .bar 	{ position:relative; display:block; width:300px; }
 .bar:before, .bar:after 	{
@@ -333,12 +326,10 @@ input:focus ~ label, input:valid ~ label 		{
 .bar:after {
   right:50%; 
 }
-
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
-
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
@@ -349,14 +340,12 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   pointer-events:none;
   opacity:0.5;
 }
-
 /* active state */
 input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
-
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
 	from { background:#5264AE; }
